@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: mongo-leaf
+    environment:
+      MONGO_INITDB_DATABASE: Intensive
+      MONGO_INITDB_ROOT_USERNAME: self
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - ./mongo-volume:/data/db
+    ports:
+      - 27017:27017
